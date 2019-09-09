@@ -1,0 +1,2 @@
+class Grassland:
+    pass

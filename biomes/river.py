@@ -2,7 +2,7 @@ from interfaces import IAquatic
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
-from animals import RiverDolphin
+from fauna import RiverDolphin
 
 
 class River(IContainsAnimals, IContainsPlants, Identifiable):

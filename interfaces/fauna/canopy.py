@@ -1,0 +1,2 @@
+class Canopy:
+    pass
