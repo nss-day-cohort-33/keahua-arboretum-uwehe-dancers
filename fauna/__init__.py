@@ -1,2 +1,2 @@
-from .animal import Animal
+from .fauna import Fauna
 from .river_dolphin import RiverDolphin

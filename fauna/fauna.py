@@ -1,4 +1,4 @@
-class Animal:
+class Fauna:
 
     def __init__(self, species):
         self.species = species

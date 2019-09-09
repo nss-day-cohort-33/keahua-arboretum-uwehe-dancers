@@ -1,0 +1,2 @@
+class Silversword:
+    pass

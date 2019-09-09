@@ -1,0 +1,2 @@
+class Pueo:
+    pass
