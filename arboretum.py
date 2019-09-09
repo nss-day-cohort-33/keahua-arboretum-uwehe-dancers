@@ -36,5 +36,6 @@ class Arboretum:
     def add_river(self, new_river):
         self.__rivers.append(new_river)
 
-    def __str__(self):
-        return f"rivers : {self.__rivers}"
+    def add_coastline(self, new_coastline):
+        self.__coastlines.append(new_coastline)
+
