@@ -1,5 +1,6 @@
 from .terrestrial import ITerrestrial
-from .fauna import IFreshwater
+from .Ifauna import IFreshwater
+from .Ifauna import IBrackish
 from .aquatic import IAquatic
 from .flying import IFlying
 from .walking import IWalking
