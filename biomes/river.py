@@ -7,7 +7,7 @@ from interfaces import IContainsPlants
 class River(IContainsAnimals, IContainsPlants, Identifiable):
 
     def __init__(self):
-      IContainsAnimals.__init__(self, 12)
+      IContainsAnimals.__init__(self, 2)
       IContainsPlants.__init__(self, 6)
       Identifiable.__init__(self)
       self.type = "River"
