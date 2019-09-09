@@ -6,3 +6,6 @@ class IContainsAnimals():
 
     def list_length(self):
         return len(self.animals)
+
+    def add_animal(self, new_animal):
+        self.animals.append(new_animal)

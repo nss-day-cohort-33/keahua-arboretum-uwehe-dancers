@@ -15,7 +15,7 @@ class River(IContainsAnimals, IContainsPlants, Identifiable):
     def add_animal(self, animal):
         try:
             if animal.brackish_water:
-                self.animals.append(animal)
+                super().add_animal(animal)
         except AttributeError:
             raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
 
