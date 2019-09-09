@@ -11,6 +11,7 @@ class River(IContainsAnimals, IContainsPlants, Identifiable):
       IContainsAnimals.__init__(self, 12)
       IContainsPlants.__init__(self, 6)
       Identifiable.__init__(self)
+      self.type = "River"
 
     def add_animal(self, animal):
         try:
