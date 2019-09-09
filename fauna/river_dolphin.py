@@ -1,12 +1,14 @@
 from fauna import Fauna
-from interfaces.fauna import IFreshwater
+from interfaces import IBrackish
+from interfaces import ISaltwater
 from interfaces import Identifiable
 
-class RiverDolphin(Fauna, IFreshwater, Identifiable):
+class RiverDolphin(Fauna, IBrackish, ISaltwater, Identifiable):
 
     def __init__(self):
-        Fauna.__init__(self, "River dolphin")
-        IFreshwater.__init__(self)
+        Fauna.__init__(self, "River Dolphin", 13)
+        IBrackish.__init__(self)
+        ISaltwater.__init__(self)
         Identifiable.__init__(self)
         self.__prey = { "Trout", "Mackarel", "Salmon", "Sardine" }
 

@@ -1,2 +1,2 @@
-def cultivate_plant():
+def cultivate_plant(arboretum):
     pass
