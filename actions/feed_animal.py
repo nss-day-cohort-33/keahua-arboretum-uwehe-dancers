@@ -1,2 +1,2 @@
-def feed_animal():
+def feed_animal(arboretum):
     pass

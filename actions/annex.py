@@ -1,17 +1,46 @@
 import os
 from biomes import River
+from biomes import Coastline
+from biomes import Forest
+from biomes import Grassland
+from biomes import Mountain
+from biomes import Swamp
 
-def annex_habitat(arboretum):
+
+def build_annex_options():
+    """
+    This will print out the options for the biomes that you can annex
+    """
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("1. River")
+    print("1. Mountain")
     print("2. Swamp")
-    print("3. Coastline")
-    print("4. Grassland")
+    print("3. Grassland")
+    print("4. Forest")
+    print("5. River")
+    print("6. Coastline")
 
-    choice = input("Choose your habitat > ")
+def annex_biome(arboretum):
+    """
+    This gives functionality for the options and calls build_annex_options
+    """
+    build_annex_options()
+    choice = input("Choose what you want to annex. \n \033[1;31;m > \033[1;0;m")
 
     if choice == "1":
-        river = River()
-        arboretum.rivers.append(river)
+        mountain = Mountain()
+        arboretum.mountains.append(mountain)
     if choice == "2":
-        pass
+        swamp = Swamp("froggy")
+        arboretum.swamps.append(swamp)
+    if choice == "3":
+        grassland = Grassland()
+        arboretum.grassland.append(grassland)
+    if choice == "4":
+        forest = Forest()
+        arboretum.forest.append(forest)
+    if choice == "5":
+        river = River()
+        arboretum.add_river(river)
+    if choice == "6":
+        coastline = Coastline()
+        arboretum.coastlines.append(coastline)

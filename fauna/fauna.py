@@ -1,6 +1,6 @@
 class Fauna:
 
-    def __init__(self, species):
+    def __init__(self, species, age):
         self.species = species
         self.age = 0
 

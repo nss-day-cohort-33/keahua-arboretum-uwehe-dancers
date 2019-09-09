@@ -1,6 +1,6 @@
 import os
 from arboretum import Arboretum
-from actions import annex_habitat
+from actions import annex_biome
 from actions import cultivate_plant
 from actions import feed_animal
 from actions import release_animal
@@ -26,10 +26,10 @@ def main_menu():
     Arguments: None
     """
     build_menu()
-    choice = input("\n Choose a KILLER option. \n \033[1;31;m > \033[1;0;m ")
+    choice = input("\n Choose a KILLER option. \n \033[1;31;m> \033[1;0;m ")
 
     if choice == "1":
-        annex_habitat(keahua)
+        annex_biome(keahua)
 
     if choice == "2":
         release_animal(keahua)

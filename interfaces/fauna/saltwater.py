@@ -1,2 +1,0 @@
-class Saltwater:
-    pass
