@@ -1,5 +1,10 @@
 import os
 from biomes import River
+from biomes import Coastline
+from biomes import Forest
+from biomes import Grassland
+from biomes import Mountain
+from biomes import Swamp
 
 
 def build_annex_options():
@@ -22,7 +27,20 @@ def annex_biome(arboretum):
     choice = input("Choose what you want to annex. \n \033[1;31;m > \033[1;0;m")
 
     if choice == "1":
+        mountain = Mountain()
+        arboretum.mountains.append(mountain)
+    if choice == "2":
+        swamp = Swamp("froggy")
+        arboretum.swamps.append(swamp)
+    if choice == "3":
+        grassland = Grassland()
+        arboretum.grassland.append(grassland)
+    if choice == "4":
+        forest = Forest()
+        arboretum.forest.append(forest)
+    if choice == "5":
         river = River()
         arboretum.rivers.append(river)
-    if choice == "2":
-        pass
+    if choice == "6":
+        coastline = Coastline()
+        arboretum.coastlines.append(coastline)
