@@ -1,2 +1,2 @@
-class Cultivate_Plant:
+def cultivate_plant():
     pass
