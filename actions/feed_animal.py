@@ -1,2 +1,2 @@
-class Feed_Animal:
+def feed_animal():
     pass
