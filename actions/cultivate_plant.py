@@ -1,13 +1,16 @@
 import os
 from enum import Enum
 from flora import Apple_Tree
+from flora import Eucalyptus
+from flora import Silversword
+from flora import Jade_Vine
 
 def cultivate_plant(arboretum):
     """
-    Set animal variable to nothing
+    Set plant variable to nothing
     User input is save as 'choice'
-    Checks how many animals can go in each biome and
-    only allows animals to be added to biomes with occupancy
+    Checks how many plants can go in each biome and
+    only allows plants to be added to biomes with occupancy
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -19,19 +22,19 @@ def cultivate_plant(arboretum):
     print("4. Blue Jade Vine")
 
 
-    choice = input("\n Choose animal.\n \033[1;31;m> \033[1;0;m ")
+    choice = input("\n Choose plant.\n \033[1;31;m> \033[1;0;m ")
 
     if choice == "1":
         plant = Apple_Tree()
 
     if choice == "2":
-        pass
+        plant = Silversword()
 
     if choice == "3":
-        pass
+        plant = Eucalyptus()
 
     if choice == "4":
-        pass
+        plant = Jade_Vine()
 
     biome_choice = list()
 
