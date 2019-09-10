@@ -6,12 +6,19 @@ from interfaces import IContainsPlants
 
 class Coastline(IContainsAnimals, IContainsPlants, Identifiable):
     def __init__(self):
+        """
+        Initialize max occupancy of plants and animals
+        """
         IContainsAnimals.__init__(self, 15)
         IContainsPlants.__init__(self, 3)
         Identifiable.__init__(self)
         self.type = "Coastline"
 
     def add_animal(self, animal):
+        """
+        Coast is saltwater; animals must be able to live in saltwater;
+        otherwise raise error
+        """
         try:
             if animal.saltwater:
                 super().add_animal(animal)
