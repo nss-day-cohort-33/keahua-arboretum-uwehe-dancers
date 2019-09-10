@@ -1,4 +1,5 @@
 import os
+from enum import Enum
 from fauna import RiverDolphin
 from fauna import Bat
 from fauna import Gecko
@@ -54,21 +55,23 @@ def release_animal(arboretum):
     if choice == "8":
         animal = Spider()
 
-    biome_choice = []
+    biome_choice = list()
 
-    try:
-        if animal.brackish_water:
-            for river in arboretum.rivers:
-                biome_choice.append(river)
-    except AttributeError:
-        pass
+    class biome_attr_enum(Enum):
+        coastlines = "saltwater"
+        rivers = "brackish_water"
+        swamps = "stagnant_water"
+        mountains = "elevation"
+        grasslands = "ground_nesting"
+        forests = "canopy"
 
-    try:
-        if animal.saltwater:
-            for coastline in arboretum.coastlines:
-                biome_choice.append(coastline)
-    except AttributeError:
-        pass
+    for biome_type in biome_attr_enum:
+        try:
+            if getattr(animal, biome_type.value):
+                for biome in getattr(arboretum, biome_type.name):
+                    biome_choice.append(biome)
+        except AttributeError:
+            pass
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
