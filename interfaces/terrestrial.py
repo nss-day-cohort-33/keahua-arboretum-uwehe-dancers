@@ -1,4 +1,4 @@
-class IGroundNesting:
+class ITerrestrial:
 
     def __init__(self):
-        self.ground_nesting = True
+        self.terrestrial = True
