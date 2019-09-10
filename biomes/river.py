@@ -7,12 +7,19 @@ from interfaces import IContainsPlants
 class River(IContainsAnimals, IContainsPlants, Identifiable):
 
     def __init__(self):
-      IContainsAnimals.__init__(self, 2)
-      IContainsPlants.__init__(self, 6)
-      Identifiable.__init__(self)
-      self.type = "River"
+        """
+        Initialize max occupancy of plants and animals
+        """
+        IContainsAnimals.__init__(self, 12)
+        IContainsPlants.__init__(self, 6)
+        Identifiable.__init__(self)
+        self.type = "River"
 
     def add_animal(self, animal):
+        """
+        River is Brackish water; animals must be brackish
+        otherwise raise error
+        """
         try:
             if animal.brackish_water:
                 super().add_animal(animal)
