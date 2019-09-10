@@ -2,6 +2,10 @@ from .terrestrial import ITerrestrial
 from .Ifauna import IFreshwater
 from .Ifauna import IBrackish
 from .Ifauna import ISaltwater
+from .Ifauna import IElevation
+from .Ifauna import ICanopy
+from .Ifauna import IStagnant
+from .Ifauna import IGroundNesting
 from .aquatic import IAquatic
 from .flying import IFlying
 from .walking import IWalking

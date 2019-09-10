@@ -1,4 +1,4 @@
 class IStagnant:
 
     def __init__(self):
-        self.stagnant = True
+        self.stagnant_water = True
