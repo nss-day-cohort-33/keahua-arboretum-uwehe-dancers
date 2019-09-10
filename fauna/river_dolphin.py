@@ -2,8 +2,11 @@ from fauna import Fauna
 from interfaces import IBrackish
 from interfaces import ISaltwater
 from interfaces import Identifiable
+from fauna import Fish
 
-class RiverDolphin(Fauna, IBrackish, ISaltwater, Identifiable):
+
+
+class RiverDolphin(Fauna, IBrackish, ISaltwater, Identifiable, Fish):
 
     def __init__(self):
         Fauna.__init__(self, "River Dolphin", 13)
@@ -25,3 +28,5 @@ class RiverDolphin(Fauna, IBrackish, ISaltwater, Identifiable):
 
     def __str__(self):
         return f'Dolphin {self.id}. Eeee EeeEEeeeeEE!'
+
+
