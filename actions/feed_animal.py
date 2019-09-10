@@ -24,19 +24,17 @@ def feed_animal(arboretum):
 
     choice = input("\n Choose animal to feed.\n \033[1;31;m> \033[1;0;m ")
 
-
-    def animal_food ():
-            os.system('cls' if os.name == 'nt' else 'clear')
-            animal.list_food()
-            print(f"What is on the menu for the {animal.species} today?")
-            choice = input(">")
+    # def animal_food ():
+    #         os.system('cls' if os.name == 'nt' else 'clear')
+    #         animal.list_food()
+    #         print(f"What is on the menu for the {animal.species} today?")
+    #         choice = input(">")
 
     if choice == "1":
-        animal = Gecko()
+        animal = arboretum.animal_feed_list("Gold Dust Day Gecko")
 
     if choice == "2":
         animal = RiverDolphin()
-        animal_food()
 
     if choice == "3":
         animal = Nene_Goose()
@@ -56,7 +54,12 @@ def feed_animal(arboretum):
     if choice == "8":
         animal = Spider()
 
+    os.system('cls' if os.name == 'nt' else 'clear')
 
+    for index, animal in enumerate(animal):
+        print(f'{index + 1}. {animal.species}')
+
+    choice = input("> ")
 
 
 
