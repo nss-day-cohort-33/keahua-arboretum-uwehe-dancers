@@ -22,3 +22,15 @@ class Mountain(IContainsAnimals, IContainsPlants, Identifiable):
                 super().add_animal(animal)
         except AttributeError:
             raise AttributeError("Animal Is Incompatible With Biome")
+
+    def add_plant(self, plant):
+        """
+        Mountain is highly elevated; plants must be able to live in high elevation;
+        otherwise raise error
+        """
+        try:
+            if plant.clay_soil:
+                IContainsPlants.add_plant(self, plant)
+        except AttributeError:
+            raise AttributeError("plant Is Incompatible With Biome")
+

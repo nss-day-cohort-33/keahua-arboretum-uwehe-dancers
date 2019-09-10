@@ -75,8 +75,8 @@ def release_animal(arboretum):
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    for index, river in enumerate(biome_choice):
-        print(f'{index + 1}. {river.type} ({river.list_length()} animals)')
+    for index, biome in enumerate(biome_choice):
+        print(f'{index + 1}. {biome.type} ({biome.animal_list_length()} animals)')
 
     print("Where would you like to place the animal\033[1;31;m? \033[1;0;m ")
     choice = input("\033[1;31;m> \033[1;0;m ")
@@ -92,8 +92,8 @@ def release_animal(arboretum):
         print(f"\n****  That biome is not large enough  ****\n****    Please choose another one     ****\n")
 
 
-        for index, river in enumerate(biome_choice):
-            print(f'{index + 1}. {river.type} ({river.list_length()} animals)')
+        for index, biome in enumerate(biome_choice):
+            print(f'{index + 1}. {biome.type} ({biome.animal_list_length()} animals)')
 
         print(f"Where would you like to release the {animal.species}\033[1;31;m? \033[1;0;m ")
         choice = input("\033[1;31;m> \033[1;0;m ")

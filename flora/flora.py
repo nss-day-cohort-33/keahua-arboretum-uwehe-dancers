@@ -1,5 +1,6 @@
-class Plant:
+class Flora:
 
-    def __init__(self, species, season):
+    def __init__(self, species, seeds_produced):
       self.species = species
-      self.peak_season = season
+      self.seeds_produced = seeds_produced
+
