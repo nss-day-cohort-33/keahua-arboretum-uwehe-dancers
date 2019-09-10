@@ -43,4 +43,4 @@ def annex_biome(arboretum):
         arboretum.add_river(river)
     if choice == "6":
         coastline = Coastline()
-        arboretum.coastlines.append(coastline)
+        arboretum.add_coastline(coastline)
