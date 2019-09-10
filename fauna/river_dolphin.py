@@ -13,17 +13,14 @@ class RiverDolphin(Fauna, IBrackish, ISaltwater, Identifiable, Fish):
         IBrackish.__init__(self)
         ISaltwater.__init__(self)
         Identifiable.__init__(self)
+        Fish.__init__(self)
 
     # @property
-    # def prey(self):
-    #     return self.__prey
+    # def food(self):
+    #     return self.__food
 
-    # def feed(self, prey):
-    #     if prey in self.__prey:
-    #         print(f'The dolphin ate {prey} for a meal')
-    #     else:
-    #         print(f'The dolphin rejects the {prey}')
-
+    def feed(self, food):
+            print(f'The {self.species} ate {food} for a meal.\nPress any key to return to the main menu...')
 
     def __str__(self):
         return f'Dolphin {self.id}. Eeee EeeEEeeeeEE!'

@@ -10,3 +10,11 @@ class Fish:
         return self.__food
 
 
+    def list_food(self):
+        for index, snack in enumerate(self.__food):
+                print(f'{index + 1}. {snack}')
+
+
+
+
+

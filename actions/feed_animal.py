@@ -1,5 +1,12 @@
 import os
 from fauna import RiverDolphin
+from fauna import Bat
+from fauna import Gecko
+from fauna import Kikakapu
+from fauna import Nene_Goose
+from fauna import Pueo
+from fauna import Spider
+from fauna import Ulae
 
 def feed_animal(arboretum):
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -17,28 +24,44 @@ def feed_animal(arboretum):
 
     choice = input("\n Choose animal to feed.\n \033[1;31;m> \033[1;0;m ")
 
+
+    def animal_food ():
+            os.system('cls' if os.name == 'nt' else 'clear')
+            animal.list_food()
+            print(f"What is on the menu for the {animal.species} today?")
+            choice = input(">")
+
     if choice == "1":
-        pass
+        animal = Gecko()
 
     if choice == "2":
         animal = RiverDolphin()
+        animal_food()
 
     if choice == "3":
-        pass
+        animal = Nene_Goose()
 
     if choice == "4":
-        pass
+        animal = Kikakapu()
 
     if choice == "5":
-        pass
+        animal = Pueo()
 
     if choice == "6":
-        pass
+        animal = Ulae()
 
     if choice == "7":
-        pass
+        animal = Bat()
 
     if choice == "8":
-        pass
+        animal = Spider()
 
-    
+
+
+
+
+
+
+
+
+
