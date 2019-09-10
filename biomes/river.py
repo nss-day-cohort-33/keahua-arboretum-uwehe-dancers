@@ -1,10 +1,9 @@
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
+from biomes import Biome
 
-
-
-class River(IContainsAnimals, IContainsPlants, Identifiable):
+class River(IContainsAnimals, IContainsPlants, Identifiable, Biome):
 
     def __init__(self):
         """
@@ -13,7 +12,7 @@ class River(IContainsAnimals, IContainsPlants, Identifiable):
         IContainsAnimals.__init__(self, 12)
         IContainsPlants.__init__(self, 6)
         Identifiable.__init__(self)
-        self.type = "River"
+        Biome.__init__(self, "River")
 
     def add_animal(self, animal):
         """

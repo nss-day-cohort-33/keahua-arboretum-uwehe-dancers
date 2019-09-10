@@ -13,3 +13,7 @@ from .swimming import ISwimming
 from .identifiable import Identifiable
 from .habitat.contains_animals import IContainsAnimals
 from .habitat.contains_plants import IContainsPlants
+from .Iflora import IClay
+from .Iflora import IMarsh
+from .Iflora import ILoamy
+from .Iflora import ISilt

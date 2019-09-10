@@ -1,10 +1,9 @@
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
+from biomes import Biome
 
-
-
-class Coastline(IContainsAnimals, IContainsPlants, Identifiable):
+class Coastline(IContainsAnimals, IContainsPlants, Identifiable, Biome):
     def __init__(self):
         """
         Initialize max occupancy of plants and animals
@@ -12,7 +11,7 @@ class Coastline(IContainsAnimals, IContainsPlants, Identifiable):
         IContainsAnimals.__init__(self, 15)
         IContainsPlants.__init__(self, 3)
         Identifiable.__init__(self)
-        self.type = "Coastline"
+        Biome.__init__(self, "Coastline")
 
     def add_animal(self, animal):
         """
