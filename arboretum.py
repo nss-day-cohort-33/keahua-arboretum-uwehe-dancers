@@ -39,3 +39,15 @@ class Arboretum:
     def add_coastline(self, new_coastline):
         self.__coastlines.append(new_coastline)
 
+    def add_forest(self, new_forest):
+        self.__forests.append(new_forest)
+
+    def add_swamp(self, new_swamp):
+        self.__swamps.append(new_swamp)
+
+    def add_mountain(self, new_mountain):
+        self.__mountains.append(new_mountain)
+
+    def add_grassland(self, new_grassland):
+        self.__grasslands.append(new_grassland)
+

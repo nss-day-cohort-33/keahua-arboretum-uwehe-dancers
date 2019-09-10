@@ -28,16 +28,16 @@ def annex_biome(arboretum):
 
     if choice == "1":
         mountain = Mountain()
-        arboretum.mountains.append(mountain)
+        arboretum.add_mountain(mountain)
     if choice == "2":
-        swamp = Swamp("froggy")
-        arboretum.swamps.append(swamp)
+        swamp = Swamp()
+        arboretum.add_swamp(swamp)
     if choice == "3":
         grassland = Grassland()
-        arboretum.grassland.append(grassland)
+        arboretum.add_grassland(grassland)
     if choice == "4":
         forest = Forest()
-        arboretum.forest.append(forest)
+        arboretum.add_forest(forest)
     if choice == "5":
         river = River()
         arboretum.add_river(river)
