@@ -5,7 +5,7 @@ class IContainsAnimals():
         self.animals = []
         self.max_animals = max
 
-    def list_length(self):
+    def animal_list_length(self):
         """
         returns a number of animals
         in the biome

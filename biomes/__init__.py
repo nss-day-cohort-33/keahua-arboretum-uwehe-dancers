@@ -1,3 +1,4 @@
+from .biome import Biome
 from .river import River
 from .coastline import Coastline
 from .forest import Forest
