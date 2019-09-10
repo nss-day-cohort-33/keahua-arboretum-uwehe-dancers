@@ -1,2 +1,2 @@
-class Stagnant:
+class IStagnant:
     pass
