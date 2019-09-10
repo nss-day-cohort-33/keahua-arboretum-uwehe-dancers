@@ -1,4 +1,5 @@
 import os
+from enum import Enum
 from fauna import RiverDolphin
 
 def release_animal(arboretum):
@@ -41,21 +42,32 @@ def release_animal(arboretum):
     if choice == "8":
         pass
 
-    biome_choice = []
+    biome_choice = list()
 
-    try:
-        if animal.brackish_water:
-            for river in arboretum.rivers:
-                biome_choice.append(river)
-    except AttributeError:
-        pass
+    class biome_attr_enum(Enum):
+        coastlines = "saltwater",
+        rivers = "brackish_water"
 
-    try:
-        if animal.saltwater:
-            for coastline in arboretum.coastlines:
-                biome_choice.append(coastline)
-    except AttributeError:
-        pass
+    for biome_type in biome_attr_enum:
+        try:
+            if getattr(animal, biome_type.value):
+                for biome in getattr(arboretum, biome_type.name):
+                    biome_choice.append(biome)
+        except KeyError:
+            pass
+    # try:
+    #     if animal.brackish_water:
+    #         for river in arboretum.rivers:
+    #             biome_choice.append(river)
+    # except AttributeError:
+    #     pass
+
+    # try:
+    #     if animal.saltwater:
+    #         for coastline in arboretum.coastlines:
+    #             biome_choice.append(coastline)
+    # except AttributeError:
+    #     pass
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -80,7 +92,6 @@ def release_animal(arboretum):
         choice = input("\033[1;31;m> \033[1;0;m ")
 
         biome_choice[int(choice) - 1].add_animal(animal)
-
 
 
 
