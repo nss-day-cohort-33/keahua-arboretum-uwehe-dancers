@@ -1,13 +1,13 @@
 from fauna import Fauna
 from interfaces import ICanopy
-from interfaces import IGround
+from interfaces import IGroundNesting
 from interfaces import Identifiable
 
-class Pueo(Fauna, IGround, ICanopy, Identifiable):
+class Pueo(Fauna, IGroundNesting, ICanopy, Identifiable):
 
     def __init__(self):
         Fauna.__init__(self, "Pueo", 8)
-        IGround.__init__(self)
+        IGroundNesting.__init__(self)
         ICanopy.__init__(self)
         Identifiable.__init__(self)
 

@@ -1,12 +1,12 @@
 from fauna import Fauna
-from interfaces import IGround
+from interfaces import IGroundNesting
 from interfaces import Identifiable
 
-class Nene_Goose(Fauna, IGround, Identifiable):
+class Nene_Goose(Fauna, IGroundNesting, Identifiable):
 
     def __init__(self):
         Fauna.__init__(self, "Nene Goose", 7)
-        IGround.__init__(self)
+        IGroundNesting.__init__(self)
         Identifiable.__init__(self)
 
     # @property
