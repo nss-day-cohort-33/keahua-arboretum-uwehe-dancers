@@ -1,2 +1,4 @@
-class Ground:
-    pass
+class IGround:
+
+    def __init__(self):
+        self.ground_nesting = True
