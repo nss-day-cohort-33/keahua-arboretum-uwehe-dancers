@@ -1,2 +1,2 @@
-class Elevation:
+class IElevation:
     pass
