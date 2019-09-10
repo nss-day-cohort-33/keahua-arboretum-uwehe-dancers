@@ -1,8 +1,9 @@
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
+from biomes import Biome
 
-class Mountain(IContainsAnimals, IContainsPlants, Identifiable):
+class Mountain(IContainsAnimals, IContainsPlants, Identifiable, Biome):
     def __init__(self):
         """
         Initialize max occupancy of plants and animals
@@ -10,7 +11,7 @@ class Mountain(IContainsAnimals, IContainsPlants, Identifiable):
         IContainsAnimals.__init__(self, 6)
         IContainsPlants.__init__(self, 4)
         Identifiable.__init__(self)
-        self.type = "Mountain"
+        Biome.__init__(self, "Mountain")
 
     def add_animal(self, animal):
         """
