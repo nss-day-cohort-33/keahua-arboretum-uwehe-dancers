@@ -18,7 +18,7 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
         otherwise raise error
         """
         try:
-            if animal.stagnant:
+            if animal.stagnant_water:
                 super().add_animal(animal)
         except AttributeError:
             raise AttributeError("Animal Is Incompatible With Biome")
