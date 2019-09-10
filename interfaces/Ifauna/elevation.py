@@ -1,2 +1,4 @@
 class IElevation:
-    pass
+
+    def __init__(self):
+        self.elevation = True

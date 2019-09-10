@@ -23,7 +23,7 @@ class Coastline(IContainsAnimals, IContainsPlants, Identifiable):
             if animal.saltwater:
                 super().add_animal(animal)
         except AttributeError:
-            raise AttributeError("Cannot add non-aquatic, or saltwater animals to a river")
+            raise AttributeError("Animal Is Incompatible With Biome")
 
     # def add_plant(self, plant):
     #     try:
