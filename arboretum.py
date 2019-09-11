@@ -51,3 +51,13 @@ class Arboretum:
     def add_grassland(self, new_grassland):
         self.__grasslands.append(new_grassland)
 
+    def animal_feed_list(self, species):
+        matching_species = []
+        biome_list = ("coastlines", "mountains", "rivers", "forests", "grasslands", "swamps")
+        for biome_type in biome_list:
+            for biome in getattr(self, biome_type):
+                for animal in getattr(biome, "animals"):
+                    if animal.species == species:
+                        matching_species.append(animal)
+        return matching_species
+
