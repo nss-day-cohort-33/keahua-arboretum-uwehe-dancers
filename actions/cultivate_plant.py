@@ -48,14 +48,15 @@ def cultivate_plant(arboretum):
         try:
             if getattr(plant, biome_type.value):
                 for biome in getattr(arboretum, biome_type.name):
-                    biome_choice.append(biome)
+                    if len(biome.plants) < biome.max_plants:
+                        biome_choice.append(biome)
         except AttributeError:
             pass
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
     for index, biome in enumerate(biome_choice):
-        print(f'{index + 1}. {biome.type} ({biome.plant_list_length()} plants)')
+        print(f'{index + 1}. {biome.type} ({biome.give_plant() if len(biome.plants) > 0 else "0 plants"})')
 
     print("Where would you like to place the plant\033[1;31;m? \033[1;0;m ")
     choice = input("\033[1;31;m> \033[1;0;m ")
