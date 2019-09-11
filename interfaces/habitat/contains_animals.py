@@ -35,10 +35,13 @@ class IContainsAnimals():
 
         animal_count = list()
 
-        # loops through the animals array and adds every animal species to animal_list. Then puts animal_list in a set and loops through that to get the count of each animal and adds that string to animal_count
+        # loops through the animals array and adds every animal species to animal_list.
 
         for animal in self.animals:
             animal_list.append(animal.species)
+
+        # Then puts animal_list in a set and loops through that to get the count of each animal and adds that string to animal_count
+
         for animal_species in set(animal_list):
             animal_count.append(f"{str(animal_list.count(animal_species))} {animal_species}")
 

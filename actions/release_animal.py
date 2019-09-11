@@ -59,7 +59,7 @@ def release_animal(arboretum):
 
     biome_choice = list()
 
-    # This is an enum that stores all the different types of biomes. Allows us to dynamically check for attributes and add biomes biome_choice
+    # This is an enum that stores all the different types of biomes. Allows us to dynamically check for attributes so we can add biomes to biome_choice
 
     class biome_attr_enum(Enum):
         coastlines = "saltwater"
@@ -82,7 +82,7 @@ def release_animal(arboretum):
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    # biome_choice is enumorated in order to get index value with each biome, so we can list out the biomes to the user with according numbers. If there are no animals then the comprehension will return 0 animals, if there are animals then the give_animal mehtod, which is found on IContainsAnimals is run which returns the string of animal number and species of each species of animal.
+    # biome_choice is enumorated in order to get index value with each biome, so we can list out the biomes to the user with according numbers. If there are no animals then the comprehension will return 0 animals, if there are animals then the give_animal method, which is found on IContainsAnimals is ran which returns the string of animal number and species of each species of animal.
 
     for index, biome in enumerate(biome_choice):
         print(f'{index + 1}. {biome.type} ({biome.give_animal() if len(biome.animals) > 0 else "0 animals"})')
