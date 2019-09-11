@@ -8,7 +8,7 @@ class Coastline(IContainsAnimals, IContainsPlants, Identifiable, Biome):
         """
         Initialize max occupancy of plants and animals
         """
-        IContainsAnimals.__init__(self, 3)
+        IContainsAnimals.__init__(self, 15)
         IContainsPlants.__init__(self, 3)
         Identifiable.__init__(self)
         Biome.__init__(self, "Coastline")
