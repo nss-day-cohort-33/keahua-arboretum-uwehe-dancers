@@ -23,3 +23,5 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
                 super().add_animal(animal)
         except AttributeError:
             raise AttributeError("Animal Is Incompatible With Biome")
+
+        
