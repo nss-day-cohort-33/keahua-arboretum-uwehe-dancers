@@ -19,13 +19,22 @@ def build_menu():
     print("5. Show Arboretum Report")
     print("6. Exit")
 
+def first_menu():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(f"\n  +-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-+\n \033[1;31;m | \033[1;0;m K  e  a  h  u  a    A  r  b  o  r  e  t  u  m \033[1;31;m | \033[1;0;m \n  +-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-+\n")
+    print("1. Annex Biome")
+
 
 def main_menu():
     """Show Keahua Action Options
 
     Arguments: None
     """
-    build_menu()
+    if len(keahua.mountains) is not 0 or len(keahua.grasslands) is not 0 or len(keahua.forests) is not 0 or len(keahua.swamps) is not 0 or len(keahua.rivers) is not 0:
+        build_menu()
+    else:
+        first_menu()
+
     choice = input("\n Choose a KILLER option. \n \033[1;31;m> \033[1;0;m ")
 
     if choice == "1":
