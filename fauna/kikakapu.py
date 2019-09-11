@@ -8,7 +8,7 @@ from food import Fish
 class Kikakapu(Fauna, IBrackish, IStagnant, Identifiable, Fish):
 
     def __init__(self):
-        Fauna.__init__(self, "Kikakapu", 1)
+        Fauna.__init__(self, "Kīkākapu", 1)
         IBrackish.__init__(self)
         IStagnant.__init__(self)
         Identifiable.__init__(self)
@@ -27,4 +27,6 @@ class Kikakapu(Fauna, IBrackish, IStagnant, Identifiable, Fish):
         self.feed(self.food[int(choice)-1])
 
     def __str__(self):
-        return f"Kikakapu {self.id}. Eeee EeeEEeeeeEE!"
+        return f"Kīkākapu {self.id}. Eeee EeeEEeeeeEE!"
+
+        

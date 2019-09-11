@@ -20,7 +20,7 @@ def feed_animal(arboretum):
     print("5. Pueo")
     print("6. 'Ulae")
     print("7. Ope'ape'a")
-    print("8. Happy-Face Spider")
+    print("8. Hawaiian Happy-Face Spider")
 
     choice = input("\n Choose animal to feed.\n \033[1;31;m> \033[1;0;m ")
 
@@ -46,7 +46,7 @@ def feed_animal(arboretum):
         animal = arboretum.animal_feed_list("Ope'ape'a")
 
     if choice == "8":
-        animal = arboretum.animal_feed_list("Happy-Face Spider")
+        animal = arboretum.animal_feed_list("Hawaiian Happy-Face Spider")
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
