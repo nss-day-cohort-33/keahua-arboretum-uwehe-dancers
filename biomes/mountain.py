@@ -26,8 +26,9 @@ class Mountain(IContainsAnimals, IContainsPlants, Identifiable, Biome):
 
     def add_plant(self, plant):
         """
-        Mountain is highly elevated; plants must be able to live in high elevation;
+        In the mountains, soil is clay; plants must be able to live in clay soil;
         otherwise raise error
+        This
         """
         try:
             if plant.clay_soil:
