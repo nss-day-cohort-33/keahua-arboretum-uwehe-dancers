@@ -27,7 +27,7 @@ def release_animal(arboretum):
     print("5. Pueo")
     print("6. 'Ulae")
     print("7. Ope'ape'a")
-    print("8. Happy-Face Spider")
+    print("8. Hawaiian Happy-Face Spider")
 
     choice = input("\n Choose animal.\n \033[1;31;m> \033[1;0;m ")
 
