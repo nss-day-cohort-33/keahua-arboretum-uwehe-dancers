@@ -20,4 +20,4 @@ def build_facility_report(arboretum):
             for animal in getattr(biome, "animals"):
                 print(f'    {animal.species} (%.8s)' % animal.id)
 
-    input("\n\nPress any key to continue...")
+    input("\n\nPress return to continue...")

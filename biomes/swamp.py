@@ -3,7 +3,7 @@ from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
 from biomes import Biome
 
-class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
+class Swamp(IContainsAnimals, IContainsPlants, Identifiable, Biome):
     def __init__(self):
         """
         Initialize max occupancy of plants and animals
@@ -24,4 +24,3 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
         except AttributeError:
             raise AttributeError("Animal Is Incompatible With Biome")
 
-        
