@@ -23,10 +23,14 @@ class Bat(Fauna, IElevation, ICanopy, Identifiable, Insect, Vegetation):
 
     def animal_food(self):
         os.system('cls' if os.name == 'nt' else 'clear')
-        Insect.list_food(self)
+        food_list = list()
+        food_list.extend(Insect.give_food(self))
+        food_list.extend(Vegetation.give_food(self))
+        for index, snack in enumerate(food_list):
+            print(f'{index + 1}. {snack}')
         print(f"What is on the menu for the {self.species} today?")
         choice = input(">")
-        self.feed(self.food[int(choice)-1])
+        self.feed(food_list[int(choice)-1])
 
 
     def __str__(self):
