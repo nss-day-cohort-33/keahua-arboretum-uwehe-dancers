@@ -12,3 +12,7 @@ class Insect:
     def list_food(self):
         for index, snack in enumerate(self.__food):
                 print(f'{index + 1}. {snack}')
+
+
+    def give_food(self):
+        return self.__food
