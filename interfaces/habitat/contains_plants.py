@@ -19,3 +19,12 @@ class IContainsPlants():
         """
         if len(self.plants) < self.max_plants:
             self.plants.append(new_plant)
+
+    def give_plant(self):
+        plant_list = list()
+        plant_count = list()
+        for plant in self.plants:
+            plant_list.append(plant.species)
+        for plant_species in set(plant_list):
+            plant_count.append(f"{str(plant_list.count(plant_species))} {plant_species}")
+        return f'{", ".join(plant_count)}'
