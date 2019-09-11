@@ -69,15 +69,15 @@ def release_animal(arboretum):
         try:
             if getattr(animal, biome_type.value):
                 for biome in getattr(arboretum, biome_type.name):
-                    biome_choice.append(biome)
+                    if len(biome.animals) < biome.max_animals:
+                        biome_choice.append(biome)
         except AttributeError:
             pass
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
     for index, biome in enumerate(biome_choice):
-        if len(biome.animals) < biome.max_animals:
-            print(f'{index + 1}. {biome.type} ({biome.give_animal() if len(biome.animals) > 0 else "0 animals"})')
+        print(f'{index + 1}. {biome.type} ({biome.give_animal() if len(biome.animals) > 0 else "0 animals"})')
 
     print("Where would you like to place the animal\033[1;31;m? \033[1;0;m ")
     choice = input("\033[1;31;m> \033[1;0;m ")
