@@ -21,13 +21,29 @@ class IContainsAnimals():
         if len(self.animals) < self.max_animals:
             self.animals.append(new_animal)
 
+
     def give_animal(self):
+        """
+        This loops through the animals list and counts how many animals live in this certain biome. It adds the number of animals and the species name to a list and the list is then joined together and returned.
+        """
+
+        # setting an empty list to add all the animal species
+
         animal_list = list()
+
+        # setting an empty list that will hold the string animal numbers with animal species
+
         animal_count = list()
+
+        # loops through the animals array and adds every animal species to animal_list. Then puts animal_list in a set and loops through that to get the count of each animal and adds that string to animal_count
+
         for animal in self.animals:
             animal_list.append(animal.species)
         for animal_species in set(animal_list):
             animal_count.append(f"{str(animal_list.count(animal_species))} {animal_species}")
+
+        # combines animal_count into a string and returns it
+
         return f'{", ".join(animal_count)}'
 
 
