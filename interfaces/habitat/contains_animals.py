@@ -21,3 +21,13 @@ class IContainsAnimals():
         if len(self.animals) < self.max_animals:
             self.animals.append(new_animal)
 
+    def give_animal(self):
+        animal_list = list()
+        animal_count = list()
+        for animal in self.animals:
+            animal_list.append(animal.species)
+        for animal_species in set(animal_list):
+            animal_count.append(f"{str(animal_list.count(animal_species))} {animal_species}")
+        return f'{", ".join(animal_count)}'
+
+
