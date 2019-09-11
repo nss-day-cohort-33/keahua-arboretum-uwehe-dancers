@@ -11,7 +11,7 @@ from fauna import Ulae
 def feed_animal(arboretum):
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    animal = None
+    animal = []
 
     print("1. Gold Dust Day Gecko")
     print("2. River Dolphin")
@@ -24,17 +24,11 @@ def feed_animal(arboretum):
 
     choice = input("\n Choose animal to feed.\n \033[1;31;m> \033[1;0;m ")
 
-    # def animal_food ():
-    #         os.system('cls' if os.name == 'nt' else 'clear')
-    #         animal.list_food()
-    #         print(f"What is on the menu for the {animal.species} today?")
-    #         choice = input(">")
-
     if choice == "1":
         animal = arboretum.animal_feed_list("Gold Dust Day Gecko")
 
     if choice == "2":
-        animal = RiverDolphin()
+        animal = arboretum.animal_feed_list("River Dolphin")
 
     if choice == "3":
         animal = Nene_Goose()
@@ -59,7 +53,9 @@ def feed_animal(arboretum):
     for index, animal in enumerate(animal):
         print(f'{index + 1}. {animal.species}')
 
-    choice = input("> ")
+    animal_choice = input("> ")
+    animal[int(animal_choice)-1].animal_food()
+
 
 
 

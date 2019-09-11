@@ -21,6 +21,12 @@ class RiverDolphin(Fauna, IBrackish, ISaltwater, Identifiable, Fish):
     # def food(self):
     #     return self.__food
 
+    def animal_food(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
+        Fish.list_food(self)
+        print(f"What is on the menu for the {self.species} today?")
+        choice = input(">")
+
 
     def feed(self, food):
             os.system('cls' if os.name == 'nt' else 'clear')
