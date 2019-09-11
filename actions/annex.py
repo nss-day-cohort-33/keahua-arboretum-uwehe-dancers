@@ -24,7 +24,7 @@ def annex_biome(arboretum):
     This gives functionality for the options and calls build_annex_options
     """
     build_annex_options()
-    choice = input("Choose what you want to annex. \n \033[1;31;m > \033[1;0;m")
+    choice = input("\n Choose what you want to annex. \n\033[1;31;m > \033[1;0;m")
 
     if choice == "1":
         mountain = Mountain()
