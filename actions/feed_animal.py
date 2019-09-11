@@ -31,30 +31,33 @@ def feed_animal(arboretum):
         animal = arboretum.animal_feed_list("River Dolphin")
 
     if choice == "3":
-        animal = Nene_Goose()
+        animal = arboretum.animal_feed_list("Nene Goose")
 
     if choice == "4":
-        animal = Kikakapu()
+        animal = arboretum.animal_feed_list("Kīkākapu")
 
     if choice == "5":
-        animal = Pueo()
+        animal = arboretum.animal_feed_list("Pueo")
 
     if choice == "6":
-        animal = Ulae()
+        animal = arboretum.animal_feed_list("'Ulae")
 
     if choice == "7":
-        animal = Bat()
+        animal = arboretum.animal_feed_list("Ope'ape'a")
 
     if choice == "8":
-        animal = Spider()
+        animal = arboretum.animal_feed_list("Happy-Face Spider")
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
     for index, species in enumerate(animal):
-        print(f'{index + 1}. {species.species}')
+        print(f'{index + 1}. {species.species} [%.8s]' % species.id)
 
     animal_choice = input("> ")
     animal[int(animal_choice)-1].animal_food()
+
+
+
 
 
 
