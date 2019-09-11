@@ -50,8 +50,8 @@ def feed_animal(arboretum):
 
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    for index, animal in enumerate(animal):
-        print(f'{index + 1}. {animal.species}')
+    for index, species in enumerate(animal):
+        print(f'{index + 1}. {species.species}')
 
     animal_choice = input("> ")
     animal[int(animal_choice)-1].animal_food()

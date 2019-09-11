@@ -17,22 +17,17 @@ class RiverDolphin(Fauna, IBrackish, ISaltwater, Identifiable, Fish):
         Identifiable.__init__(self)
         Fish.__init__(self)
 
-    # @property
-    # def food(self):
-    #     return self.__food
+    def feed(self, food):
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print(f'The {self.species} ate {food} for a meal.\n')
+            input('Press enter to return to the main menu...')
 
     def animal_food(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         Fish.list_food(self)
         print(f"What is on the menu for the {self.species} today?")
         choice = input(">")
-
-
-    def feed(self, food):
-            os.system('cls' if os.name == 'nt' else 'clear')
-            print(f'The {self.species} ate {food} for a meal.\nPress any key to return to the main menu...')
-
-
+        self.feed(self.food[int(choice)-1])
 
     def __str__(self):
         return f'Dolphin {self.id}. Eeee EeeEEeeeeEE!'
